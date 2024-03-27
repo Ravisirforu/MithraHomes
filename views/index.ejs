@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<style>
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.4;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-30px);
+        }
+
+        60% {
+            transform: translateY(-15px);
+        }
+    }
+
+    .bounce {
+        animation: bounce 2s infinite;
+    }
+
+    .active-button {
+        background-color: #F49C08 !important;
+
+        transition: all ease 0.5s;
+    }
+
+    nav .right ul li a {
+        transition: color 0.5s ease, transform 0.5s ease;
+    }
+
+    nav .right ul li a:hover {
+        color: #F49C08;
+        transform: scale(1.1);
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <nav class="flex items-center justify-between px-6 py-3 border-b-2">
+            <div class="left">
+                <a href="/"><img class="h-[80px]" src="/images/MithraHomesLogo.png" alt=""></a>
+            </div>
+            <div class="right">
+                <ul class="flex gap-6 items-center  ">
+                    <li class="text-[#16436A] font-bold"><a href="/">Home</a></li>
+                    <li class="text-[#16436A] font-bold"><a href="/">About</a></li>
+                    <li class="text-[#16436A] font-bold"><a href="/gallery">Gallery</a></li>
+                    <li class="text-[#16436A] font-bold"><a href="/contact">Contact</a></li>
+                    <li class="text-[#16436A] font-bold"><a href="/">Admin</a></li>
+                    <h4><i id="menu-btn" class="ri-menu-line"></i></h4>
+                </ul>
+            </div>
+        </nav>
+        <div id="slidebar">
+            <a href="/">Home</a>
+            <a href="/">About</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <div class="page-1 ">
+            <div class="page-1-content">
+                <h1 class="text-[40px] md:text-5xl lg:text-6xl font-bold text-[#F49C08] leading-none"
+                    style="text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.5);">
+                    Welcome to Mithra Homes</h1>
+                <p class="text-[#fff] " style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                ">We are a team of professionals who are dedicated to providing you with
+                    the
+                    best services in the industry. Our goal is to help you find the perfect home for your needs, whether
+                    you are looking to buy or rent.</p>
+
+                <button
+                    class="bounce text-white w-[fit-content] py-2 px-5 mt-2 font-semibold rounded-lg bg-[#F49C08]">Get
+                    started <i class="ri-arrow-down-double-line"></i></button>
+            </div>
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="/images/page1img/page1img3.jpeg" alt="">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/images/page1img/page1img1.jpeg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/page1img/page1img2.jpeg" alt="">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="/images/page1img/page1img4.jpeg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="/images/page1img/page1img5.jpeg" alt="">
+                    </div>
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="page-1-footer">
+                <div class="page-1-footer-item">
+                    <img src="https://www.stayatskyla.com/assets/img/icon-material-room-service.png" alt="">
+                    <h2>Room Service </h2>
+                </div>
+                <div class="page-1-footer-item">
+                    <img src="https://www.stayatskyla.com/assets/img/icon-awesome-broom.png" alt="">
+                    <h2>House Keeping</h2>
+                </div>
+                <div class="page-1-footer-item">
+                    <img src="https://www.stayatskyla.com/assets/img/icon-awesome-self-service.png" alt="">
+                    <h2>Self Service </h2>
+                </div>
+                <div class="page-1-footer-item">
+                    <img src="https://www.stayatskyla.com/assets/img/Icon-map-laundry.png" alt="">
+                    <h2>Laundry</h2>
+
+                </div>
+            </div>
+        </div>
+        <div class="page-2">
+            <h1 class="text-xl md:text-3xl lg:text-4xl font-bold text-[#16436A] leading-none">WHERE WOULD YOU LIKE TO
+                STAY?</h1>
+            <p class="mt-2 text-sm md:text-base lg:text-lg">Choose from a collection of properties that are hand-picked
+                to meet your
+                work-life-travelbalance.
+            </p>
+
+            <div class="page-2-collapse mt-10">
+                <div class="page-2-buttons flex gap-4 justify-center mb-2">
+                    <button id="room1"
+                        class="active-button bg-[#16436A] text-white py-2 px-3 rounded-lg font-semibold">Hotel Room
+                        1</button>
+                    <button id="room2" class="bg-[#16436A] text-white py-2 px-3 rounded-lg">Hotel Room 2</button>
+                </div>
+
+
+                <div id="roomImages" class="h-[fit-content] w-full border-2 p-2 flex flex-wrap justify-center gap-3">
+
+                    <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px] ">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel2/hotel2img2.jpeg" alt="Room 1 Image 1">
+                    </div>
+
+                    <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel2/hotel2img3.jpeg" alt="Room 1 Image 1">
+                    </div>
+                    <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel2/hotel2img4.jpeg" alt="Room 1 Image 1">
+                    </div>
+                    <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel2/hotel2img5.jpeg" alt="Room 1 Image 1">
+                    </div>
+
+                    <div class="image-container" style=" position: relative;
+                        width: 350px;
+                        height: 300px;">
+                        <img class="w-full h-full object-cover" src="/images/hotel2/hotel2img1.jpeg"
+                            alt="Room 1 Image 1">
+                        <div class="overlay" style=" position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.5);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;">
+                            <a href="/gallery"> <button class="view-more" style=" background: #F49C08;
+                                color: white;
+                                padding: 10px 20px;
+                                border: none;
+                                border-radius: 5px;
+                                font-size: 16px;
+                                cursor: pointer;
+                                animation: bounce 3s infinite;">Click to view more <i
+                                        class="ri-arrow-down-double-line"></i></button></a>
+                        </div>
+                    </div>
+
+
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+        </div>
+        <div class="page-3">
+            <div class="left ">
+                <img src="/images/hotel2/hotel2img2.jpeg" alt="">
+            </div>
+            <div class="right">
+                <h1 class="text-[23px] font-semibold">Well-rounded Amenities That Complete Your Stay</h1>
+                <div class="page-3-items  flex flex-wrap justify-center gap-8 md:gap-11">
+                    <div class="page-3-icons flex flex-col items-center justify-center gap-2">
+                        <img src="/images/page3img/img1.png" alt="">
+                        <h3>Family Friendly</h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="/images/page3img/img2.png" alt="">
+                        <h3>Air Conditioning</h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="/images/page3img/img3.png" alt="">
+                        <h3>Balcony</h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="/images/page3img/img4.png" alt="">
+                        <h3>Power Backup </h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="/images/page3img/img5.png" alt="">
+                        <h3>In-room Dining</h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="/images/page3img/img6.png" alt="">
+                        <h3>Living Hall </h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="/images/page3img/img7.png" alt="">
+                        <h3>LED TV </h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="/images/page3img/img8.png" alt="">
+                        <h3>Parking</h3>
+                    </div>
+                    <div class="flex flex-col items-center justify-center gap-2">
+                        <img src="/images/page3img/img9.png" alt="">
+                        <h3>Washer Self Dry </h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="page-4 ">
+            <div class="page-4-content">
+
+                <h1 class="text-[30px] font-bold mb-4 text-[#16436A] font-bold
+                ">GOT A QUESTION?</h1>
+                <h3 class="text-md md:text-2xl mb-6" style="color: #646363;">Frequently Asked Questions</h3>
+
+                <div class="layout text-left">
+                    <div class="accordion">
+                        <div class="accordion__question flex justify-between items-center">
+                            <p>WHY SHOULD I STAY AT MITHRA HOMES?
+
+                            </p>
+                            <i class="ri-arrow-down-double-line"></i>
+                        </div>
+                        <div class="accordion__answer">
+                            <p>Our uniqueness is in combining the luxury of premium service and the warmth of a home.
+                                Mithra’s Serviced Apartments & Suites accommodate everyone from a business traveller to
+                                a
+                                family on vacation. And when it comes to making our guests comfortable and happy, we do
+                                it
+                                with pride.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion__question flex justify-between items-center">
+                            <p>WHY IS MITHRA BETTER THAN A REGULAR HOTEL?
+                            </p>
+                            <i class="ri-arrow-down-double-line"></i>
+
+                        </div>
+
+                        <div class="accordion__answer">
+                            <p>
+                                It’s the format of our serviced apartments and suites. The room you will be staying in
+                                will
+                                be spacious, has a living room attached to it, and majority of our rooms comes with a
+                                kitchen to cook your own meals. Even if you were to compare only the price, a regular
+                                hotel
+                                of this standard could cost at least 30% more
+                            </p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion__question flex justify-between items-center">
+                            <p>WHY SHOULD I STAY AT MITHRA HOMES?
+                            </p>
+                            <i class="ri-arrow-down-double-line"></i>
+                        </div>
+                        <div class="accordion__answer">
+                            <p>Our uniqueness is in combining the luxury of premium service and the warmth of a home.
+                                Mithra’s Serviced Apartments & Suites accommodate everyone from a business traveller to
+                                a
+                                family on vacation. And when it comes to making our guests comfortable and happy, we do
+                                it
+                                with pride.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion">
+                        <div class="accordion__question flex justify-between items-center">
+                            <p>WHY IS MITHRA BETTER THAN A REGULAR HOTEL?
+                            </p>
+                            <i class="ri-arrow-down-double-line"></i>
+
+                        </div>
+
+                        <div class="accordion__answer">
+                            <p>
+                                It’s the format of our serviced apartments and suites. The room you will be staying in
+                                will
+                                be spacious, has a living room attached to it, and majority of our rooms comes with a
+                                kitchen to cook your own meals. Even if you were to compare only the price, a regular
+                                hotel
+                                of this standard could cost at least 30% more
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="sub-footer">
+                <div class="part-1">
+                    <h1>Popular Locations</h1>
+                    <ul>
+                        <li>Delhi</li>
+                        <li>Mumbai</li>
+                        <li>Banglore</li>
+                        <li>Hyderabad</li>
+                        <li>Chennai</li>
+                    </ul>
+                </div>
+                <!-- <div class="part-2">
+                    <h1>About</h1>
+                    <ul>
+                        <li>Product</li>
+                        <li>Store Locations</li>
+                        <li>Join Distributor</li>
+                        <li>Contact Page</li>
+                        <li>About us</li>
+                    </ul>
+                </div> -->
+                <div class="part-3">
+                    <h1>Link</h1>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li> Gallery</li>
+                        <li>Gallery </li>
+                        <li>Terms & Condition </li>
+                    </ul>
+                </div>
+                <div class="part-4">
+                    <h1>Let's Talk</h1>
+                    <ul>
+                        <li><i class="ri-map-pin-line"></i>&nbsp; <%= admin && admin.location1 ? admin.location1
+                                : 'Office Chowdhry Mohalla near Munazir Building Katihar Bihar 854105' %>
+                        </li>
+                        <li><i class="ri-phone-line"></i>&nbsp; <%= admin && admin.location2 ? admin.location2
+                                : '8092392331' %>
+                        </li>
+                        <li><i class="ri-phone-line"></i>&nbsp; <%= admin && admin.contact ? admin.contact
+                                : '8100381856' %>
+                        </li>
+                        <li><i class="ri-phone-line"></i>&nbsp; <%= admin && admin.email ? admin.email : 'awe@aw.com' %>
+                        </li>
+
+                        <!-- 
+                    <li><i class="ri-map-pin-line"></i>&nbsp; Office Chowdhry Mohalla near Munazir Building Katihar Bihar 854105
+                    </li>
+                    <li><i class="ri-phone-line"></i>&nbsp;8092392331</li>
+                    <li><i class="ri-phone-line"></i>&nbsp; 8100381856</li>
+                    <li><i class="ri-phone-line"></i>&nbsp; 8100391856</li> -->
+                    </ul>
+                </div>
+            </div>
+            <footer>
+                <div class="part-1">
+                    <h1>© 2024 Mithra Homes</h1>
+                </div>
+                <div class="part-2">
+                    <i class="ri-facebook-circle-fill"></i>
+                    <!-- <i class="ri-twitter-line"></i> -->
+                    <!-- <i class="ri-instagram-line"></i> -->
+                    <i class="ri-linkedin-fill"></i>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
+    <!-- Hotel room change script -->
+    <script>
+        document.getElementById('room1').addEventListener('click', function () {
+            this.classList.add('active-button');
+            document.getElementById('room2').classList.remove('active-button');
+            document.getElementById('roomImages').innerHTML = `
+            <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel2/hotel2img2.jpeg" alt="Room 1 Image 1">
+                    </div>
+                    <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel2/hotel2img3.jpeg" alt="Room 1 Image 1">
+                    </div>
+                    <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel2/hotel2img4.jpeg" alt="Room 1 Image 1">
+                    </div>
+                    <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel2/hotel2img5.jpeg" alt="Room 1 Image 1">
+                    </div>
+
+                    <div class="image-container" style=" position: relative;
+                        width: 350px;
+                        height: 300px;">
+                        <img class="w-full h-full object-cover" src="/images/hotel2/hotel2img1.jpeg"
+                            alt="Room 1 Image 1">
+                        <div class="overlay" style=" position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.5);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;">
+                            <a href="/gallery"> <button class="view-more" style=" background: #F49C08;
+                                color: white;
+                                padding: 10px 20px;
+                                border: none;
+                                border-radius: 5px;
+                                font-size: 16px;
+                                cursor: pointer;
+                                animation: bounce 3s infinite;">Click to view more <i
+                                    class="ri-arrow-down-double-line"></i></button></a>
+                        </div>
+                    </div>
+
+    
+            <!-- Add more images as needed -->
+        `;
+        });
+
+        document.getElementById('room2').addEventListener('click', function () {
+            this.classList.add('active-button');
+            document.getElementById('room1').classList.remove('active-button');
+            document.getElementById('roomImages').innerHTML = `
+            <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel1/hotel1img2.jpeg" alt="Room 1 Image 1">
+                    </div>
+                    <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel1/hotel1img3.jpeg" alt="Room 1 Image 1">
+                    </div>
+                    <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel1/hotel1img4.jpeg" alt="Room 1 Image 1">
+                    </div>
+                    <div class="overflow-hidden relative w-full md:w-[350px] md:h-[300px]">
+                        <img class="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+                            src="/images/hotel1/hotel1img5.jpeg" alt="Room 1 Image 1">
+                    </div>
+
+                    <div class="image-container" style=" position: relative;
+                        width: 350px;
+                        height: 300px;">
+                        <img class="w-full h-full object-cover" src="/images/hotel1/hotel1img1.jpeg"
+                            alt="Room 1 Image 1">
+                        <div class="overlay" style=" position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.5);
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;">
+                            <a href="/gallery"> <button class="view-more" style=" background: #F49C08;
+                                color: white;
+                                padding: 10px 20px;
+                                border: none;
+                                border-radius: 5px;
+                                font-size: 16px;
+                                cursor: pointer;
+                                animation: bounce 3s infinite;">Click to view more <i
+                                    class="ri-arrow-down-double-line"></i></button></a>
+                        </div>
+                    </div>
+         
+            <!-- Add more images as needed -->
+        `;
+        });
+    </script>
+
+    <script>
+        let answers = document.querySelectorAll(".accordion");
+        answers.forEach((event) => {
+            event.addEventListener("click", () => {
+                if (event.classList.contains("active")) {
+                    event.classList.remove("active");
+                } else {
+                    event.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+
+    <!-- Sidebar JS -->
+    <script src="/javascripts/sidebar.js"></script>
+
+</body>
+
+</html>
