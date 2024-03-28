@@ -8,8 +8,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="/stylesheets/gallery.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/scrollToTop.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
+<style>
+    @keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-30px);
+        }
+
+        60% {
+            transform: translateY(-15px);
+        }
+    }
+
+    .bounce {
+        animation: bounce 2s infinite;
+    }
+</style>
 
 <body>
     <div class="main">
@@ -23,6 +48,7 @@
                     <li class="text-[#16436A] font-bold"><a href="/">About</a></li>
                     <li class="text-[#16436A] font-bold"><a href="/gallery">Gallery</a></li>
                     <li class="text-[#16436A] font-bold"><a href="/contact">Contact</a></li>
+                    <li class="text-[#16436A] font-bold"><a href="/login">Admin</a></li>
                     <h4><i id="menu-btn" class="ri-menu-line"></i></h4>
                 </ul>
             </div>
@@ -148,11 +174,15 @@
             </div>
 
         </div>
+        <div id="scroll-to-top" class="bounce" onclick="scrollToTop()">
+            <span>&#8593;</span>
+        </div>
     </div>
 
-       <!-- Sidebar JS -->
-       <script src="/javascripts/sidebar.js"></script>
-
+    <!-- Sidebar JS -->
+    <script src="/javascripts/sidebar.js"></script>
+    <!-- Scroll to top JS -->
+    <script src="/javascripts/scrollToTop.js"></script>
 </body>
 
 </html>

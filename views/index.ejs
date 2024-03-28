@@ -9,6 +9,7 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/scrollToTop.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <style>
@@ -97,7 +98,7 @@
                     <li class="text-[#16436A] font-bold"><a href="/">About</a></li>
                     <li class="text-[#16436A] font-bold"><a href="/gallery">Gallery</a></li>
                     <li class="text-[#16436A] font-bold"><a href="/contact">Contact</a></li>
-                    <li class="text-[#16436A] font-bold"><a href="/">Admin</a></li>
+                    <li class="text-[#16436A] font-bold"><a href="/login">Admin</a></li>
                     <h4><i id="menu-btn" class="ri-menu-line"></i></h4>
                 </ul>
             </div>
@@ -376,11 +377,10 @@
                 <div class="part-1">
                     <h1>Popular Locations</h1>
                     <ul>
-                        <li>Delhi</li>
+                        <!-- <li>Delhi</li>
                         <li>Mumbai</li>
-                        <li>Banglore</li>
+                        <li>Banglore</li> -->
                         <li>Hyderabad</li>
-                        <li>Chennai</li>
                     </ul>
                 </div>
                 <!-- <div class="part-2">
@@ -399,8 +399,7 @@
                         <li>Home</li>
                         <li>About</li>
                         <li> Gallery</li>
-                        <li>Gallery </li>
-                        <li>Terms & Condition </li>
+                        <li>Contact </li>
                     </ul>
                 </div>
                 <div class="part-4">
@@ -409,13 +408,13 @@
                         <li><i class="ri-map-pin-line"></i>&nbsp; <%= admin && admin.location1 ? admin.location1
                                 : 'Office Chowdhry Mohalla near Munazir Building Katihar Bihar 854105' %>
                         </li>
-                        <li><i class="ri-phone-line"></i>&nbsp; <%= admin && admin.location2 ? admin.location2
+                        <li><i class="ri-map-pin-line"></i>&nbsp; <%= admin && admin.location2 ? admin.location2
                                 : '8092392331' %>
                         </li>
                         <li><i class="ri-phone-line"></i>&nbsp; <%= admin && admin.contact ? admin.contact
                                 : '8100381856' %>
                         </li>
-                        <li><i class="ri-phone-line"></i>&nbsp; <%= admin && admin.email ? admin.email : 'awe@aw.com' %>
+                        <li><i class="ri-mail-line"></i>&nbsp; <%= admin && admin.email ? admin.email : 'awe@aw.com' %>
                         </li>
 
                         <!-- 
@@ -439,6 +438,9 @@
                 </div>
             </footer>
         </div>
+    </div>
+    <div id="scroll-to-top" class="bounce" onclick="scrollToTop()">
+        <span>&#8593;</span>
     </div>
 
 
@@ -571,6 +573,7 @@
         });
     </script>
 
+    <!-- FAQ Section JS -->
     <script>
         let answers = document.querySelectorAll(".accordion");
         answers.forEach((event) => {
@@ -584,9 +587,11 @@
         });
     </script>
 
-
     <!-- Sidebar JS -->
     <script src="/javascripts/sidebar.js"></script>
+
+    <!-- Scroll to top JS -->
+    <script src="/javascripts/scrollToTop.js"></script>
 
 </body>
 
