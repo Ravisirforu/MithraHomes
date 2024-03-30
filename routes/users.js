@@ -39,7 +39,16 @@ const userSchema = new mongoose.Schema({
         required:[true,"password is required"],
         minLength:[3,"password must be at least 3 characters long"]
     },
-    contact: {
+    contact1: {
+      type: String,
+      validate: {
+          validator: function(v) {
+              return /\d{10}/.test(v);
+          },
+          message: props => `${props.value} is not a valid phone number!`
+      }
+    },
+    contact2: {
       type: String,
       validate: {
           validator: function(v) {
