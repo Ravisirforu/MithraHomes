@@ -144,7 +144,13 @@ nav .right h4{
     margin-top: 50px;
 }
 
-
+.pricing-page{
+  /* height: 100vh; */
+  width: 100%;
+  position: relative;
+  padding: 40px 20px;
+  text-align: center;
+}
 
 .page-4{
     height: 100vh;
