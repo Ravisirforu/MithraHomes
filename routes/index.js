@@ -32,7 +32,8 @@ router.get('/dashboard',isLoggedIn, async function(req,res,next){
         location1: req.body.location1,
         location2: req.body.location2,
         email: req.body.email,
-        contact: req.body.contact,
+        contact1: req.body.contact1,
+        contact2: req.body.contact2,
       },
       { new: true }
     );
